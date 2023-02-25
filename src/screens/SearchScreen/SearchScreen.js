@@ -50,20 +50,18 @@ const styles = StyleSheet.create({
     borderRadius: hp(1),
     alignItems: 'center',
     textAlign: 'center',
-    padding: hp(1),
     marginLeft: wp(4),
     marginTop:hp(12),
     elevation: hp(3),
   },
   searchIcon: {
     color: '#a80302',
+    left:wp(1)
   },
   input: {
-    marginRight: wp(3),
-    width: wp('90%'),
-    fontSize: wp(5),
+    fontSize: wp(4),
     color: 'black',
-    marginBottom: hp(-1.1),
+    left:wp(1)
   },
   Search: {
     fontWeight: 'bold',

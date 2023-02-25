@@ -72,7 +72,6 @@ getTotalQuantity();
   return (
     <View style={styles.container}>
           <View style={styles.total}>
-      <TouchableOpacity>
             <Fontisto
               name="shopping-basket-add"
               size={wp(10)}
@@ -81,7 +80,6 @@ getTotalQuantity();
             />
             <Text style={styles.counter}>{cartCount}</Text>
 
-          </TouchableOpacity>
           </View>
       <VirtualizedList>
         {/* <Pressable>
@@ -141,7 +139,7 @@ getTotalQuantity();
                 alignItems: 'center',
                 backgroundColor: 'green',
                 borderRadius: wp(1),
-                width: wp(25),
+                width: wp(25.5),
                 bottom: hp(7),
                 left: hp(14),
                 height: hp(4.3),
@@ -220,7 +218,7 @@ const styles = StyleSheet.create({
     
   },
   counter:{
-    color: 'black',
+    color: 'white',
     fontWeight:'bold',
     fontSize: wp(3.5),
     textAlign: 'center',
