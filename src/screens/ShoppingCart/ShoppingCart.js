@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
     
   },
   counter:{
-    color: 'white',
+    color: 'black',
     fontWeight:'bold',
     fontSize: wp(3.5),
     textAlign: 'center',
