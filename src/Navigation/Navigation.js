@@ -3,6 +3,7 @@ import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+//import {createDrawerNavigator} from '@react-navigation/drawer'
 //import Ionicons from 'react-native-vector-icons/Ionicons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
@@ -39,6 +40,8 @@ const Stack = createNativeStackNavigator();
 // const ProfileStack = createStackNavigator();
 
 const Tab = createBottomTabNavigator();
+
+//const Drawer=createDrawerNavigator();
 
 // const HomeStackScreen = () =>(
 //     <HomeStack.Navigator>
@@ -91,6 +94,16 @@ const Navigation = () => {
   );
 };
 
+// const MyDrawer=()=>{
+//   return(
+//     <Drawer.Navigator>
+//       <Drawer.Screen name='Home' component={HomeScreen}/>
+//       <Drawer.Screen name='Notification' component={NotificationScreen}/>
+//     </Drawer.Navigator>
+//   )
+// }
+
+
 const HomeNavigation = () => {
   return (
     <Tab.Navigator
@@ -126,7 +139,7 @@ const HomeNavigation = () => {
       }}>
       <Tab.Screen
         name="Home"
-        component={HomeScreen}
+        component={HomeScreen}            //component={MyDrawer}
         options={{
           tabBarIcon: ({focused, color}) => {
             return <FontAwesome5 name="home" size={25} color={color} />;
