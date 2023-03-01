@@ -1,12 +1,11 @@
-import {View, Text, StyleSheet,Button,TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet,Button,TouchableOpacity,I18nManager} from 'react-native';
 import React from 'react';
-import SwitchSelector from 'react-native-switch-selector';
 import { useTranslation } from 'react-i18next';
-const options = [
-  {label: 'EN', value: 'en'},
-  {label: 'AR', value: 'ar'},
-  {label: 'FR', value: 'fr'},
-];
+import'../languages/i18n';
+import RNRestart from "react-native-restart";
+
+
+
     
 const Test = () => {
   const {t, i18n} = useTranslation();
@@ -29,16 +28,26 @@ const Test = () => {
           }}
         /> */}
 
+
+
+
         <TouchableOpacity
-          onPress={() => i18n.changeLanguage('en')} //Here I change the language to "en" English
-          style={Styles.button}>
-          <Text style={{color: '#000',fontWeight:'bold'}}>EN</Text>
+          onPress={() => i18n.changeLanguage(i18n.language === 'ar' ? 'en' : 'ar')
+          .then(() => {
+            I18nManager.forceRTL(i18n.language === 'ar');
+            RNRestart.Restart();
+
+          })
+          .catch(err => {
+            console.log('something went wrong while applying RTL');
+          })
+            
+        } //Here I change the language to "es" Spanish
+          style={Styles.button1}>
+          <Text style={{color: '#000',fontWeight:'bold'}}>EN/AR</Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => i18n.changeLanguage('ar')} //Here I change the language to "es" Spanish
-          style={Styles.button}>
-          <Text style={{color: '#000',fontWeight:'bold'}}>AR</Text>
-        </TouchableOpacity>
+
+
         <TouchableOpacity
           onPress={() => i18n.changeLanguage('fr')} //Here I change the language to "de" German
           style={Styles.button}>
@@ -53,6 +62,15 @@ export default Test;
 const Styles = StyleSheet.create({
   button: {
     width:32,
+    height:30,
+    backgroundColor: '#ffffff',
+    padding: 5,
+    borderRadius: 7,
+    margin: 5,
+    elevation:10
+  },
+  button1: {
+    width:60,
     height:30,
     backgroundColor: '#ffffff',
     padding: 5,

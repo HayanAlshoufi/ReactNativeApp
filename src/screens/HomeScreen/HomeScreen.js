@@ -18,6 +18,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Himenus from '../../assets/images/himenus.png';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import VirtualizedList from '../../VirtualizedList';
+
 /////
 import {useTranslation} from 'react-i18next';
 /////
