@@ -44,9 +44,7 @@ const SignInScreen = () => {
     console.log(data);
     dispatch(setName(data.username));
   dispatch(setPass(data.password));
-    navigation.navigate('HomeScreen');
-    
-    
+    navigation.navigate('HomeScreen'); 
   };
 
   const onForgotPasswordPressed = () => {

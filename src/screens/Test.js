@@ -3,6 +3,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import'../languages/i18n';
 import RNRestart from "react-native-restart";
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 
 
@@ -14,8 +15,8 @@ const Test = () => {
       <View         
       style={{
           flexDirection: 'row',
-          marginLeft:30,
-          marginTop:5,
+          marginLeft:wp(7),
+          marginTop:hp(0.5),
 
         }}
         >
@@ -61,21 +62,22 @@ const Test = () => {
 export default Test;
 const Styles = StyleSheet.create({
   button: {
-    width:32,
-    height:30,
+    width:wp(8),
+    alignItems:'center',
+    height:hp(3.8),
     backgroundColor: '#ffffff',
-    padding: 5,
-    borderRadius: 7,
-    margin: 5,
-    elevation:10
+    padding: wp(1.4),
+    borderRadius: wp(1.5),
+    margin: wp(1.4),
+    elevation:wp(2)
   },
   button1: {
-    width:60,
-    height:30,
+    width:wp(13),
+    height:hp(3.8),
     backgroundColor: '#ffffff',
-    padding: 5,
-    borderRadius: 7,
-    margin: 5,
-    elevation:10
+    padding: wp(1.4),
+    borderRadius: wp(1.5),
+    margin: wp(1.4),
+    elevation:wp(2)
   },
 });
