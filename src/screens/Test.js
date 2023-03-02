@@ -72,7 +72,7 @@ const Styles = StyleSheet.create({
     elevation:wp(2)
   },
   button1: {
-    width:wp(13),
+    width:wp(14),
     height:hp(3.8),
     backgroundColor: '#ffffff',
     padding: wp(1.4),
